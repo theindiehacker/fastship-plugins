@@ -13,9 +13,15 @@
     {
       "name": "fastmvp",
       "source": "./plugins/fastmvp",
-      "description": "fastmvp.jp の Claude Code 設定を移植したプラグイン。aws / curl / python3 コマンドを自動承認する PreToolUse フックを提供する。",
-      "category": "productivity",
-      "keywords": ["permissions", "hooks", "fastmvp"]
+      "description": "全社共通の開発ワークフロー。fastship.jp の .claude を移植した DDD スキル (issue → refine → design → dev → push-pr / conform)・DDD 規約ハンドブック・規約自動注入/ガードフックと、fastmvp.jp 由来の aws / curl / python3 自動承認フックを提供する。",
+      "category": "workflow",
+      "keywords": ["ddd", "workflow", "github", "hooks", "rules", "permissions"]
+    },
+    {
+      "name": "hello-world",
+      "source": "./plugins/hello-world",
+      "description": "マーケットプレイス導入の動作確認用サンプル",
+      "category": "example"
     }
   ]
 }

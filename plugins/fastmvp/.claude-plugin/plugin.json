@@ -1,13 +1,13 @@
 {
   "name": "fastmvp",
   "displayName": "FastMVP",
-  "version": "0.1.0",
-  "description": "fastmvp.jp プロジェクトの Claude Code 設定(.claude/settings.local.json)を移植したプラグイン。aws / curl / python3 コマンドを自動承認する PreToolUse フックを提供する。",
+  "version": "0.2.0",
+  "description": "theindiehacker 全社共通の開発ワークフロープラグイン。fastship.jp の .claude を移植した DDD ワークフロースキル (issue → refine → design → dev → push-pr / conform)、DDD 規約ハンドブック (rules)、規約要点を自動注入する rules-guard フック、--no-verify / ローカル terraform apply を禁止するガードフック、fastmvp.jp 由来の aws / curl / python3 自動承認フックを提供する。",
   "author": {
     "name": "gtaiyou24",
     "email": "gtaiyou24@gmail.com",
     "url": "https://github.com/theindiehacker"
   },
   "repository": "https://github.com/theindiehacker/claude-plugins",
-  "keywords": ["permissions", "hooks", "fastmvp"]
+  "keywords": ["ddd", "workflow", "github", "hooks", "rules", "permissions"]
 }

@@ -1,19 +1,43 @@
 # claude-plugins
 
 theindiehacker プロジェクト群で使う Claude Code プラグインのマーケットプレイスです。
+fastship.jp / fastmvp.jp で運用してきた `.claude/` 資産 (スキル・エージェント・フック・規約) を、全社のどのリポジトリからも使えるようにプラグイン化しています。
 
 ## 使い方
+
+### 個人でインストールする
 
 ```
 /plugin marketplace add theindiehacker/claude-plugins
 /plugin install <plugin-name>@theindiehacker
 ```
 
+### リポジトリ単位でチーム全員に配る (推奨)
+
+各リポジトリの `.claude/settings.json` に以下を追記してコミットします。メンバーがそのリポジトリで Claude Code を起動すると、信頼確認のうえ自動でインストールされます:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "theindiehacker": {
+      "source": {
+        "source": "github",
+        "repo": "theindiehacker/claude-plugins"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "fastmvp@theindiehacker": true
+  }
+}
+```
+
 ## プラグイン一覧
 
 | プラグイン | 説明 |
 | --- | --- |
-| [fastmvp](plugins/fastmvp/) | fastmvp.jp の Claude Code 設定を移植。`aws` / `curl` / `python3` コマンドを自動承認する PreToolUse フックを提供する。 |
+| [fastmvp](plugins/fastmvp/) | 全社共通の開発ワークフロー。DDD スキル (`/fastmvp:issue` → `/fastmvp:refine` → `/fastmvp:design` → `/fastmvp:dev` → `/fastmvp:push-pr`、`/fastmvp:conform`)・エージェント (`tdd` / `domain-model-reviewer`)・DDD 規約ハンドブック (`rules/`)・規約自動注入/ガードフック・`aws` / `curl` / `python3` 自動承認フック |
+| [hello-world](plugins/hello-world/) | マーケットプレイス導入の動作確認用サンプル (`/hello-world:hello`) |
 
 ## リポジトリ構成
 
@@ -22,5 +46,6 @@ claude-plugins/
 ├── .claude-plugin/
 │   └── marketplace.json   # マーケットプレイスカタログ
 └── plugins/
-    └── fastmvp/           # 各プラグイン本体
+    ├── fastmvp/           # 全社共通の開発ワークフロープラグイン
+    └── hello-world/       # 動作確認用サンプル
 ```
