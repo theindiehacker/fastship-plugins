@@ -1,0 +1,13 @@
+{
+  "name": "fastmvp",
+  "displayName": "FastMVP",
+  "version": "0.1.0",
+  "description": "fastmvp.jp プロジェクトの Claude Code 設定(.claude/settings.local.json)を移植したプラグイン。aws / curl / python3 コマンドを自動承認する PreToolUse フックを提供する。",
+  "author": {
+    "name": "gtaiyou24",
+    "email": "gtaiyou24@gmail.com",
+    "url": "https://github.com/theindiehacker"
+  },
+  "repository": "https://github.com/theindiehacker/claude-plugins",
+  "keywords": ["permissions", "hooks", "fastmvp"]
+}

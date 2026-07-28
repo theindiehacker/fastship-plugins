@@ -1,0 +1,21 @@
+{
+  "name": "theindiehacker",
+  "description": "theindiehacker プロジェクト群で使う Claude Code プラグインのマーケットプレイス",
+  "owner": {
+    "name": "gtaiyou24",
+    "email": "gtaiyou24@gmail.com",
+    "url": "https://github.com/theindiehacker"
+  },
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "fastmvp",
+      "source": "./plugins/fastmvp",
+      "description": "fastmvp.jp の Claude Code 設定を移植したプラグイン。aws / curl / python3 コマンドを自動承認する PreToolUse フックを提供する。",
+      "category": "productivity",
+      "keywords": ["permissions", "hooks", "fastmvp"]
+    }
+  ]
+}
