@@ -2,7 +2,6 @@
 name: setup
 description: 対象リポジトリに組織推奨の開発スタックを導入し、コミット・PR 作成まで行う。導入済みのリポジトリでは最新版に更新する。使い方 → /dev:setup [owner/repo]
 argument-hint: "[owner/repo]"
-model: sonnet
 ---
 
 # セットアップ手順
